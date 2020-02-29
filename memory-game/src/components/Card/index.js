@@ -8,14 +8,18 @@ import { Container, Row, Col } from "../Grid";
 
 function Card({
   image = "https://placehold.it/300x300",
-  clicked = false
+  clicked,
+  name,
+  clickState
 }) {
   return (
-    <li className="memCard">
+    <li className="memCard" data-name={name}>
       <Container>
         <Row>
           <Col size="xs-2 sm-2">
-            <img src={image}/>
+              <h1>{name}</h1>
+              <p>{clickState}</p>
+              <img src={image}/>
            </Col>
         </Row>
       </Container>

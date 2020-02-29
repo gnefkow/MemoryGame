@@ -1,0 +1,39 @@
+[
+  {
+    "key": "card1",
+    "name": "card 1",
+    "clicked": false,
+    "clickState": "Non-Clicked",
+    "image": "https://images.generated.photos/ww3Ht-Tf6Zh17fJYFQEJeNWcqwUMhVlAVykzQH0Uu90/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAwMDIzOTYuanBn.jpg"
+  }, {
+    "key": "card2",
+    "name": "card 2",
+    "clicked": false,
+    "clickState": "Non-Clicked",
+    "image": "https://images.generated.photos/r2rDJdUdz6sAjqPgZYNViEeHm4w2cdNJdOp2MXVyxdw/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zLzA5/OTk4NzAuanBn.jpg"
+  },{
+    "key": "card3",
+    "name": "card 3",
+    "clicked": false,
+    "clickState": "Non-Clicked",
+    "image": "https://images.generated.photos/jxEIuP7dvcTJU65alnyfKdDop1nkvBFfPDS4Fyb_8To/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zLzA1/MjY1MzAuanBn.jpg"
+  },{
+    "key": "card4",
+    "name": "card 4",
+    "clicked": false,
+    "clickState": "Non-Clicked",
+    "image": "https://images.generated.photos/gIQs5znc6V_PNuLzVFIxll5VP3hvDoH3Jj9AUad8dSc/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zLzA5/OTg3ODQuanBn.jpg"
+  },{
+    "key": "card5",
+    "name": "card 5",
+    "clicked": false,
+    "clickState": "Non-Clicked",
+    "image": "https://images.generated.photos/ww3Ht-Tf6Zh17fJYFQEJeNWcqwUMhVlAVykzQH0Uu90/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAwMDIzOTYuanBn.jpg"
+  },{
+    "key": "card6",
+    "name": "card 6",
+    "clicked": false,
+    "clickState": "Non-Clicked",
+    "image": "https://images.generated.photos/ww3Ht-Tf6Zh17fJYFQEJeNWcqwUMhVlAVykzQH0Uu90/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAwMDIzOTYuanBn.jpg"
+  }
+]

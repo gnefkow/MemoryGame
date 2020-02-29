@@ -1,39 +1,38 @@
 import React, { Component } from "react";
 import "./style.css";
 import Card from "../Card";
-import Photos from "../Photos";
+import Photos from "../Photos.json";
 
-let keyNumber;
-let sampleImage = [{image: "https://images.generated.photos/ww3Ht-Tf6Zh17fJYFQEJeNWcqwUMhVlAVykzQH0Uu90/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAwMDIzOTYuanBn.jpg"}]
+
 
 class CardTable extends Component {
     state = {
-      cards: [
-        {
-          name: "card 1",
-          image: "https://images.generated.photos/ww3Ht-Tf6Zh17fJYFQEJeNWcqwUMhVlAVykzQH0Uu90/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAwMDIzOTYuanBn.jpg"
-        }, {
-          name: "card 2",
-          image: "https://images.generated.photos/ww3Ht-Tf6Zh17fJYFQEJeNWcqwUMhVlAVykzQH0Uu90/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAwMDIzOTYuanBn.jpg"
-        }
-      ]
+      Photos
     };
   
 
-
+handleClickEvent = () =>{
+  // this.setState({clicked: true, clickState: "Clicked!"})
+  alert(`Clicked ${this}!!!`)
+}
 
 // createCards = () => {}
 
   render() {
     return (
       <div className="list-overflow-container">
-        <ul className="list-group">Hello world
-        {this.state.cards.map(card => {
+        <ul className="list-group">
+        {this.state.Photos.map(card => {
           return(
+            <div onClick={this.handleClickEvent}>
             <Card
               image={card.image}
               name={card.name}
+              clicked={card.clicked}
+              key={card.key}
+              clickState={card.clickState}
             />
+            </div>
           )
         })}
         </ul>
