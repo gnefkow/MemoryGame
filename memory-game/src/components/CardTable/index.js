@@ -11,30 +11,27 @@ class CardTable extends Component {
     };
   
 
-handleClickEvent = () =>{
-  // this.setState({clicked: true, clickState: "Clicked!"})
-  alert(`Clicked ${this}!!!`)
-}
+handleCardClick = name => {
+  this.setState({clicked: true, clickState: "Clicked!"})
+  alert(`Clicked ${name}!!!`)
+  // alert(`The state is now ${clickState}`)
 
-// createCards = () => {}
+};
 
   render() {
     return (
       <div className="list-overflow-container">
         <ul className="list-group">
-        {this.state.Photos.map(card => {
-          return(
-            <div onClick={this.handleClickEvent}>
+        {this.state.Photos.map(card => (
             <Card
+              handleCardClick={this.handleCardClick}
               image={card.image}
               name={card.name}
               clicked={card.clicked}
               key={card.key}
               clickState={card.clickState}
             />
-            </div>
-          )
-        })}
+        ))}
         </ul>
     </div>
     

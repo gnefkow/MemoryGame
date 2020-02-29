@@ -6,20 +6,19 @@ import { Container, Row, Col } from "../Grid";
 
 
 
-function Card({
-  image = "https://placehold.it/300x300",
-  clicked,
-  name,
-  clickState
-}) {
+function Card(props) {
   return (
-    <li className="memCard" data-name={name}>
+    <li 
+        className="memCard" 
+        data-name={props.name}
+        onClick={() => props.handleCardClick(props.name)}
+      >
       <Container>
         <Row>
           <Col size="xs-2 sm-2">
-              <h1>{name}</h1>
-              <p>{clickState}</p>
-              <img src={image}/>
+              <h1>{props.name}</h1>
+              <p>{props.clickState}</p>
+              <img src={props.image}/>
            </Col>
         </Row>
       </Container>
