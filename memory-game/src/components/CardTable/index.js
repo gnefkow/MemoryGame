@@ -12,10 +12,19 @@ class CardTable extends Component {
   
 
 handleCardClick = name => {
-  this.setState({clicked: true, clickState: "Clicked!"})
+  // this.setState({clicked: true, clickState: "Clicked!"})
   alert(`Clicked ${name}!!!`)
-  // alert(`The state is now ${clickState}`)
-
+  const thisCard = this.state.Photos.filter(card => card.name == name);
+  let thisCardClicked = thisCard[0].clicked;
+  let thisCardClickState = thisCard[0].clickState;
+  let thisCardIndex = thisCard[0].index;
+  console.log(`first, thisCard's clicked is ${thisCardClicked}
+                and thisCard's clickstate is ${thisCardClickState}`)
+  Photos[thisCardIndex].clicked = true;
+  thisCardClickState = "Clicked!";
+  console.log(`then, thisCard's clicked is ${thisCardClicked}
+                and thisCard's clickstate is ${thisCardClickState}`)
+  console.log(Photos)
 };
 
   render() {
