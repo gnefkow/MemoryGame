@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 import Card from "../Card";
 import Photos from "../Photos.json";
+import { Container, Row, Col } from "../Grid";
 
 
 
@@ -12,38 +13,52 @@ class CardTable extends Component {
   
 
 handleCardClick = name => {
-  // this.setState({clicked: true, clickState: "Clicked!"})
-  alert(`Clicked ${name}!!!`)
   const thisCard = this.state.Photos.filter(card => card.name == name);
-  let thisCardClicked = thisCard[0].clicked;
-  let thisCardClickState = thisCard[0].clickState;
-  let thisCardIndex = thisCard[0].index;
-  console.log(`first, thisCard's clicked is ${thisCardClicked}
-                and thisCard's clickstate is ${thisCardClickState}`)
-  Photos[thisCardIndex].clicked = true;
-  thisCardClickState = "Clicked!";
-  console.log(`then, thisCard's clicked is ${thisCardClicked}
-                and thisCard's clickstate is ${thisCardClickState}`)
-  console.log(Photos)
+  let i = thisCard[0].index;
+  
+  
+
+  function guessedRight(){
+    Photos[i].clicked = true;
+    Photos[i].clickState = "Clicked!";
+    alert("Good Job");
+  }
+  function guessedWrong(){
+    alert("Already selected this one!");
+  }
+  let determineGuess = Photos[i].clicked ?  guessedWrong : guessedRight;
+  determineGuess();
+  
+
+  
+  
+//   if (Photos[i].clicked == true){
+//     alert("Already selected this one!")
+//   } else {
+//   Photos[i].clicked = true;
+//   Photos[i].clickState = "Clicked!";
+//   console.log(Photos[i])
+// }
 };
 
   render() {
     return (
       <div className="list-overflow-container">
-        <ul className="list-group">
-        {this.state.Photos.map(card => (
-            <Card
-              handleCardClick={this.handleCardClick}
-              image={card.image}
-              name={card.name}
-              clicked={card.clicked}
-              key={card.key}
-              clickState={card.clickState}
-            />
-        ))}
-        </ul>
-    </div>
-    
+        <Container>
+          <Row>
+            {this.state.Photos.map(card => (
+                <Card
+                  handleCardClick={this.handleCardClick}
+                  image={card.image}
+                  name={card.name}
+                  clicked={card.clicked}
+                  key={card.key}
+                  clickState={card.clickState}
+                />
+            ))}
+          </Row>
+        </Container>
+      </div>
     )
   }
 }

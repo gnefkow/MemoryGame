@@ -8,21 +8,21 @@ import { Container, Row, Col } from "../Grid";
 
 function Card(props) {
   return (
-    <li 
-        className="memCard" 
+    <div 
+         
         data-name={props.name}
         onClick={() => props.handleCardClick(props.name)}
       >
       <Container>
         <Row>
-          <Col size="xs-2 sm-2">
+          <Col size="xs-2 sm-2" className="memCard">
               <h1>{props.name}</h1>
               <p>{props.clickState}</p>
-              <img src={props.image}/>
+              <img className="cardImage" src={props.image}/>
            </Col>
         </Row>
       </Container>
-    </li>
+    </div>
   )
 }
 
