@@ -1,0 +1,9 @@
+.memCard {
+  background-color: orange;
+  width: 40px;
+}
+
+.cardImage {
+  width: 5em;
+  height: 5em;
+}
