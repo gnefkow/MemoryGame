@@ -16,7 +16,7 @@ function Card(props) {
       <Container>
         <Row>
           <Col size="xs-2 sm-2" className="memCard">
-              <h1>{props.name}</h1>
+              {/* <h1>{props.name}</h1> */}
               <p>{props.clickState}</p>
               <img className="cardImage" src={props.image}/>
            </Col>
